@@ -47,7 +47,7 @@ def generate_quiz_list(transcripts):
 
     quiz_list = []
 
-    for quiz_id, text in enumerate(text_list):
+    for text in text_list:
         try:
             question, answer = gpt.generate_quiz(text, client)
         except Exception as e:
