@@ -1,8 +1,8 @@
 import requests
 
 
-def generate_image(text, client):
-    dalle_response = client.images.generate(
+async def generate_image(text, client):
+    dalle_response = await client.images.generate(
         model="dall-e-3",
         prompt=text,
         size="1024x1024",

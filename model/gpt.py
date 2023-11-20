@@ -6,11 +6,11 @@ GPT_PROMPT = """Generate only one True/False quiz and its answer based on the fo
             Answer:"""
 
 
-def generate_quiz(text, client):
+async def generate_quiz(text, client):
     messages = [{"role": "system", "content": GPT_PROMPT},
                 {"role": "user", "content": text}]
 
-    response = client.chat.completions.create(
+    response = await client.chat.completions.create(
         model=GPT_NAME,
         messages=messages
     )
