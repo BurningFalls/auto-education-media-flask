@@ -1,0 +1,5 @@
+Flask==2.3.2
+openai==1.1.1
+youtube-transcript-api==0.6.1
+boto3==1.28.82
+load-dotenv==0.1.0
